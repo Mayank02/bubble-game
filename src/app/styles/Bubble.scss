@@ -1,0 +1,163 @@
+$noOfBubble: 10;
+@for $i from 1 through $noOfBubble {
+    $val: $i * 7 + 20;
+    .bubble-#{$i} {
+        width: #{$val}px;
+        height: #{$val}px;
+    }
+}
+
+.bubble-1 {
+    .ball {
+        background: #28330d !important;
+    }
+}
+.bubble-2 {
+    .ball {
+        background: #f73d4e !important;
+    }
+}
+.bubble-3 {
+    .ball {
+        background: #77050f !important;
+    }
+}
+.bubble-4 {
+    .ball {
+        background: #ff0015 !important;
+    }
+}
+.bubble-5 {
+    .ball {
+        background: #351c77 !important;
+    }
+}
+.bubble-6 {
+    .ball {
+        background: #963b15 !important;
+    }
+}
+.bubble-7 {
+    .ball {
+        background: #ce4c4c !important;
+    }
+}
+.bubble-8 {
+    .ball {
+        background: #7b9631 !important;
+    }
+}
+.bubble-9 {
+    .ball {
+        background: #e2331f !important;
+    }
+}
+.bubble-10 {
+    .ball {
+        background: #ed254d !important;
+    }
+}
+
+.bubbles {
+    .bubble-wrapper {
+        margin: auto;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        padding:0;
+        margin:0;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        .ball {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            margin: 0;
+            border-radius: 50%;
+            position: relative;
+            background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+        }
+        .iris {
+            width: 40%;
+            height: 40%;
+            margin: 30%;
+            border-radius: 100%;
+            background: radial-gradient(circle at 50% 50%, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
+            -webkit-transform: translateX(0px) translateY(0px) skewX(15deg) skewY(2deg);
+            -moz-transform: translateX(0px) translateY(0px) skewX(15deg) skewY(2deg);
+            -ms-transform: translateX(0px) translateY(0px) skewX(15deg) skewY(2deg);
+            -o-transform: translateX(0px) translateY(0px) skewX(15deg) skewY(2deg);
+            transform: translateX(0px) translateY(0px) skewX(15deg) skewY(2deg);
+            position: absolute;
+            -webkit-animation: move-eye-skew 5s ease-out infinite;
+            -moz-animation: move-eye-skew 5s ease-out infinite;
+            -o-animation: move-eye-skew 5s ease-out infinite;
+            -ms-animation: move-eye-skew 5s ease-out infinite;
+            animation: move-eye-skew 5s ease-out infinite;
+        }
+        .iris:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 37.5%;
+            height: 37.5%;
+            border-radius: 100%;
+            top: 31.25%;
+            left: 31.25%;
+            background: black;
+        }
+        .iris:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 31.25%;
+            height: 31.25%;
+            border-radius: 100%;
+            top: 18.75%;
+            left: 18.75%;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .ball .shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+            -webkit-transform: rotateX(90deg) translateZ(-150px);
+            -moz-transform: rotateX(90deg) translateZ(-150px);
+            -ms-transform: rotateX(90deg) translateZ(-150px);
+            -o-transform: rotateX(90deg) translateZ(-150px);
+            transform: rotateX(90deg) translateZ(-150px);
+            z-index: -1;
+        }
+        .stage {
+            display: inline-block;
+            margin: 0px;
+            -webkit-perspective: 1200px;
+            -moz-perspective: 1200px;
+            -ms-perspective: 1200px;
+            -o-perspective: 1200px;
+            perspective: 1200px;
+            -webkit-perspective-origin: 50% 50%;
+            -moz-perspective-origin: 50% 50%;
+            -ms-perspective-origin: 50% 50%;
+            -o-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+        }
+    }
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width: 320px) {
+        .bubble-wrapper {
+        }
+    }
+    /* Small Devices, Tablets, IPAD */
+    @media only screen and (min-width: 768px) {
+        .bubble-wrapper {
+        }
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width: 992px) {
+        .bubble-wrapper {
+        }
+    }
+}
